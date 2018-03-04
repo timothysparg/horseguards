@@ -19,4 +19,9 @@ class HorseguardsController {
         return "Hello " + name + "!";
     }
 
+    @RequestMapping(method = GET, path = "kitties/{qyt}")
+    public String kitties(@PathVariable Integer qty) {
+        return "So many kitties" + qty;
+    }
+
 }
