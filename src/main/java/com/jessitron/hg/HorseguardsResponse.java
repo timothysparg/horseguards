@@ -11,4 +11,8 @@ public class HorseguardsResponse {
     public int statusCode() {
         return statusCode;
     }
+
+    public void close() {
+        // good job
+    }
 }

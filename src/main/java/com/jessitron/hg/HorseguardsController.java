@@ -11,7 +11,25 @@ class HorseguardsController {
         HorseguardsClient client = new HorseguardsClient();
 
         HorseguardsResponse response = client.get("https://bananas.com")
-            .execute();
+                .execute();
+
+        return "App running: Served from " + getClass().getName() +
+                " got " + response.statusCode();
+    }
+
+    public String storingResponseCorrectly() throws IOException {
+
+        HorseguardsClient client = new HorseguardsClient();
+
+        HorseguardsResponse response = null;
+        try {
+            response = client.get("https://bananas.com")
+                    .execute();
+        } finally {
+            if (response != null) {
+                response.close();
+            }
+        }
 
         return "App running: Served from " + getClass().getName() +
                 " got " + response.statusCode();
@@ -27,6 +45,27 @@ class HorseguardsController {
 
         return "App running: Served from " + getClass().getName() +
                 " got " + statusCode;
+    }
+
+    public String storingStatusCodeCorrectly() throws IOException {
+
+        HorseguardsClient client = new HorseguardsClient();
+
+        HorseguardsResponse response = null;
+        try {
+            response = client.get("https://bananas.com")
+                    .execute();
+        } finally {
+            if (response != null) {
+                response.close();
+            }
+        }
+
+        int statusCode = response.statusCode();
+
+        return "App running: Served from " + getClass().getName() +
+                " got " + statusCode;
+
     }
 
 }
