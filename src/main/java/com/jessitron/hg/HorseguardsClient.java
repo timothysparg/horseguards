@@ -10,7 +10,7 @@ public class HorseguardsClient {
 }
 
 class HorseguardsConnection {
-    public String execute() {
-        return "oh that was exciting";
+    public HorseguardsResponse execute() {
+        return new HorseguardsResponse(4);
     }
 }

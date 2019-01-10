@@ -10,10 +10,11 @@ class HorseguardsController {
 
         HorseguardsClient client = new HorseguardsClient();
 
-        String response = client.get("https://bananas.com")
+        HorseguardsResponse response = client.get("https://bananas.com")
             .execute();
 
-        return "App running: Served from " + getClass().getName();
+        return "App running: Served from " + getClass().getName() +
+                " got " + response.statusCode;
     }
 
 }
