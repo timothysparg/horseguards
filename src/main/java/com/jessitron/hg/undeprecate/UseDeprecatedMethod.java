@@ -8,8 +8,6 @@ import java.util.Set;
 public class UseDeprecatedMethod {
     public String carrot() {
 
-     //   com/google/common/collect/ConcurrentHashMultiset
-
         ConcurrentHashMultiset<String> chm = ConcurrentHashMultiset.create();
         chm.add("foo");
 
