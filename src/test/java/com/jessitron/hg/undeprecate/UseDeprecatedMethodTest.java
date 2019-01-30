@@ -11,7 +11,7 @@ public class UseDeprecatedMethodTest {
 
         String result = new UseDeprecatedMethod().carrot();
 
-        assertEquals("I like to createEntrySet some days 1", result);
+        assertEquals("I like to create" + "EntrySet some days 1", result);
     }
 
 
