@@ -15,6 +15,6 @@ public class UseDeprecatedMethod {
 
         int len = entrySet.size();
 
-        return "carrot " + len;
+        return "I like to createEntrySet some days " + len;
     }
 }
