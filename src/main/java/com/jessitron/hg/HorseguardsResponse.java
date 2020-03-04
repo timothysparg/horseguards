@@ -2,14 +2,14 @@ package com.jessitron.hg;
 
 public class HorseguardsResponse {
 
-    private final int theStatusCode;
+    private final int statusCode;
 
-    public HorseguardsResponse(int theStatusCode) {
-        this.theStatusCode = theStatusCode;
+    public HorseguardsResponse(int statusCode) {
+        this.statusCode = statusCode;
     }
 
-    public int theStatusCode() {
-        return theStatusCode;
+    public int statusCode() {
+        return statusCode;
     }
 
     public void close() {
